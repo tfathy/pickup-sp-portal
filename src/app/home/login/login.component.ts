@@ -20,4 +20,12 @@ export class LoginComponent implements OnInit {
       login: true
     });
   }
+
+  closeModal(){
+    this.modal.dismiss({
+      login: false
+    });
+  }
+
+
 }

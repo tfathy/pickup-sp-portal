@@ -39,7 +39,7 @@ export class HomePage implements OnInit {
         modalElement.present();
         modalElement.onDidDismiss().then(dismissData=>{
           if(dismissData.data.login){
-            this.router.navigate([]);
+            this.router.navigate(['/','landing']);
           }
         });
       });
