@@ -28,3 +28,24 @@
 ion-slides {
   height: 100%;
 }
+hr {
+  width: 40%;
+  height: 2px;
+  background-color: rgb(8, 8, 8);
+  margin-bottom: 7px;
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-top: 9px;
+  border-width: 2px;
+  border-color: rgb(8, 8, 8);
+}
+
+.login-modal {
+  --backdrop-opacity: 0.6 !important;
+  .modal-wrapper {
+    --height: 50% !important;
+    --width: 40% !important;
+    position: absolute;
+  }
+}
+

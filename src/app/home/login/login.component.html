@@ -1,0 +1,31 @@
+<ion-content>
+  <div class="container login-container">
+    <div class="row">
+      <div class="col-md-12 login-form">
+        <h3>Login for Form </h3>
+        <form>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Your Email *" value="" />
+          </div>
+          <div class="mb-3">
+            <input type="password" class="form-control" placeholder="Your Password *" value="" />
+          </div>
+          <div class="d-grid gap-2">
+            <input type="button" class="btn btn-primary" value="Login" (click)="loginAction()"/>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <div class="mb-3">
+        <ion-button (click)="forgetPasswordAction()" class="ForgetPwd">Forget Password?</ion-button>
+      </div>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
