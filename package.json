@@ -24,7 +24,6 @@
     "@ionic/angular": "^5.5.2",
     "@ngx-translate/core": "^13.0.0",
     "bootstrap": "^5.0.2",
-    "include-media": "^1.4.10",
     "ionic-selectable": "^4.8.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",
