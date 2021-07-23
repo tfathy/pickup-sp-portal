@@ -1,17 +1,28 @@
-<ion-app>
+<ion-app [dir]="appDirection">
   <ion-menu side="end" menuId="first" contentId="main">
     <ion-header>
       <ion-toolbar color="primary">
-        <ion-title>Start Menu</ion-title>
+        <ion-title>{{"START_MENU"|translate}}</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content>
       <ion-list>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
+        <ion-menu-toggle autoHide="false">
+          <ion-item (click)="change2Arabic()" button
+            detail="false"
+          >
+            <ion-icon slot="start" name="help"></ion-icon>
+            <ion-label> عربي </ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle autoHide="false">
+          <ion-item (click)="change2English()" button
+            detail="false"
+          >
+            <ion-icon slot="start" name="help"></ion-icon>
+            <ion-label> English </ion-label>
+          </ion-item>
+        </ion-menu-toggle>
       </ion-list>
     </ion-content>
   </ion-menu>

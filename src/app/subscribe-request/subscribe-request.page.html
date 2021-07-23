@@ -1,9 +1,71 @@
 <ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title>subscribe-request</ion-title>
+    <ion-title>{{"SUBSCRIPTION_REQUEST"|translate}}</ion-title>
+    <ion-buttons slot="start">
+      <ion-button color="primary" [routerLink]="'/'">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="ion-padding">
+  <form [formGroup]="form">
+
+    <ion-grid>
+      <ion-row>
+        <ion-col  sizeLg="6" sizeMd="6" sizeSm="12">
+          <ion-item>
+            <ion-label position="floating">{{"COMPANY_NAME_AR"|translate}}</ion-label>
+            <ion-input formControlName="companyNameAr"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">{{"COMPANY_NAME_EN"|translate}}</ion-label>
+            <ion-input formControlName="companyNameEn"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">{{"COMM_NUM"|translate}}</ion-label>
+            <ion-input formControlName="commNumber"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">{{"CONTACT_PERSON_NAME"|translate}}</ion-label>
+            <ion-input formControlName="contactPersonName"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">{{"EMAIL"|translate}}</ion-label>
+            <ion-input formControlName="contactPersonEmail"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">{{"PHONE"|translate}}</ion-label>
+            <ion-input formControlName="contactPersonPhone"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">{{"COUNTRY"|translate}} </ion-label>
+           <ion-select formControlName="gnCountry">
+            <ion-select-option
+            *ngFor="let country of countryList" [value]="country"
+            >
+            {{country.nameAr}}
+          </ion-select-option>
+           </ion-select>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">{{"ADDRESS"|translate}} </ion-label>
+            <ion-input formControlName="address"></ion-input>
+          </ion-item>
+
+          <ion-button fill="solid" color="primary" expand="block"
+          (click)="postRequest()">{{"SEND_REQUEST"|translate}}
+            <ion-icon name="send-outline" slot="end"></ion-icon>
+          </ion-button>
+        </ion-col>
+        <ion-col  sizeLg="6" sizeMd="6" sizeSm="12">
+          <ion-img src="assets/icon/fillin.jpg"></ion-img>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+  </form>
 
 </ion-content>

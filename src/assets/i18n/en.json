@@ -1,0 +1,17 @@
+{
+  "LOGIN": "log In",
+  "CREATE_TEAM":"Create a team",
+  "MAIN_MENU": "Main Menu",
+  "START_MENU":"Start Menu",
+  "SUBSCRIBE":"Subscribe Now",
+  "SUBSCRIPTION_REQUEST":"Subscription Request",
+  "COMPANY_NAME_AR":"Company Name In Arabic",
+  "COMPANY_NAME_EN":"Company Name In English ",
+  "COMM_NUM":"Commercial Number",
+  "CONTACT_PERSON_NAME":"Contact Person Name",
+  "EMAIL":"email address",
+  "PHONE":"Phone Number",
+  "COUNTRY":"Country",
+  "ADDRESS":"Address",
+  "SEND_REQUEST":"Send Request"
+}

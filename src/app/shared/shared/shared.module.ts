@@ -19,7 +19,13 @@ import { LoginComponent } from 'src/app/home/login/login.component';
     TranslateModule,
   ],
   exports:[
-    LoginComponent
+    LoginComponent,
+    FormsModule,
+    HttpClientModule,
+    IonicModule,
+    ReactiveFormsModule,
+    TranslateModule,
+    IonicSelectableModule
   ]
 })
 export class SharedModule {}

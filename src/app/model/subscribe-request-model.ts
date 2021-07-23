@@ -2,7 +2,7 @@ import { CountryModel } from './country-model';
 import { SysOwnerModel } from './sys-owner-model';
 import { WhoColumnModel } from './whoColumn-model';
 
-export class SubscriptionRequest{
+export class SubscriptionRequestModel{
   constructor(
     public id?: number,
     public reqDate?: Date,
