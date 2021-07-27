@@ -13,5 +13,6 @@
   "PHONE":"Phone Number",
   "COUNTRY":"Country",
   "ADDRESS":"Address",
-  "SEND_REQUEST":"Send Request"
+  "SEND_REQUEST":"Send Request",
+  "NEW_REQUESTS":"New Requests"
 }

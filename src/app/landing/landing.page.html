@@ -1,9 +1,87 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>{{"MAIN_MENU"|translate}}</ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-title>
+        {{"MAIN_MENU"|translate}}
+      </ion-title>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button color="light" [routerLink]="'/profile'"> {{"SETTINGS"|translate}}
+        <ion-icon name="settings" slot="end"></ion-icon>
+      </ion-button>
+      <ion-button color="light" (click)="logout()">{{"LOG_OUT"|translate}}
+        <ion-icon name="log-out" slot="end"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true" color="light" class="home_container">
+  <ion-grid class="padding">
+    <ion-row class="ion-text-start">
+      <ion-col sizeLg="4" sizeMd="6" sizeSm="12">
+        <ion-item class="menu-item" button [routerLink]="['/credit-limit']" lines="none">
+          <ion-img slot="start" class="small" src="assets/icon/rss.svg"></ion-img>
+          <div>
+            <ion-label>{{"NEW_REQUESTS"|translate}}</ion-label>
+            <ion-note slot="start"> Click to add new Buyer</ion-note>
+          </div>
+        </ion-item>
+      </ion-col>
+      <ion-col sizeLg="4" sizeMd="6" sizeSm="12">
+        <ion-item class="menu-item" button [routerLink]="['/credit-limit']" lines="none">
+          <ion-img slot="start" class="small" src="assets/icon/follow-up.svg"></ion-img>
+          <div>
+            <ion-label>{{"REQUEST_FOLLOWUP"|translate}}</ion-label>
+            <ion-note slot="start"> Click to add new Buyer</ion-note>
+          </div>
+        </ion-item>
+      </ion-col>
+      <ion-col sizeLg="4" sizeMd="6" sizeSm="12">
+        <ion-item class="menu-item" button [routerLink]="['/credit-limit']" lines="none">
+          <ion-img slot="start" class="small" src="assets/icon/trunc.svg"></ion-img>
+          <div>
+            <ion-label>{{"DIRECT_REQUESTS"|translate}}</ion-label>
+            <ion-note slot="start"> Click to add new Buyer</ion-note>
+          </div>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col sizeLg="4" sizeMd="6" sizeSm="12">
+        <ion-item class="menu-item" button [routerLink]="['/credit-limit']" lines="none">
+          <ion-img slot="start" class="small" src="assets/icon/location.svg"></ion-img>
+          <div>
+            <ion-label>{{"TEAM_LOCATIONS"|translate}}</ion-label>
+            <ion-note slot="start"> Click to add new Buyer</ion-note>
+          </div>
+        </ion-item>
+      </ion-col>
+      <ion-col sizeLg="4" sizeMd="6" sizeSm="12">
+        <ion-item class="menu-item" button [routerLink]="['/credit-limit']" lines="none">
+          <ion-img slot="start" class="small" src="assets/icon/location.svg"></ion-img>
+          <div>
+            <ion-label>{{"TEAM_LOCATIONS"|translate}}</ion-label>
+            <ion-note slot="start"> Click to add new Buyer</ion-note>
+          </div>
+        </ion-item>
+      </ion-col>
+      <ion-col sizeLg="4" sizeMd="6" sizeSm="12">
+        <ion-item class="menu-item" button [routerLink]="['/credit-limit']" lines="none">
+          <ion-img slot="start" class="small" src="assets/icon/location.svg"></ion-img>
+          <div>
+            <ion-label>{{"TEAM_LOCATIONS"|translate}}</ion-label>
+            <ion-note slot="start"> Click to add new Buyer</ion-note>
+          </div>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+
+  </ion-grid>
 
 </ion-content>

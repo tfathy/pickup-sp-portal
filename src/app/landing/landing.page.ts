@@ -11,5 +11,7 @@ export class LandingPage implements OnInit {
 
   ngOnInit() {
   }
+  logout(){
 
+  }
 }

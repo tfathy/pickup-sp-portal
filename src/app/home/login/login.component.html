@@ -21,7 +21,7 @@
             <input type="password" class="form-control" placeholder="Your Password *" value="" />
           </div>
           <div class="d-grid gap-2">
-            <input type="button" class="btn btn-primary" value="Login" (click)="loginAction()"/>
+            <ion-button color="primary"  value="Login" (click)="loginAction()">{{"LOGIN"|translate}}</ion-button>
           </div>
 
         </form>
@@ -34,7 +34,7 @@
   <ion-toolbar>
     <ion-buttons slot="end">
       <div class="mb-3">
-        <ion-button (click)="forgetPasswordAction()" class="ForgetPwd">Forget Password?</ion-button>
+        <ion-button color="primary" (click)="forgetPasswordAction()" class="ForgetPwd">Forget Password?</ion-button>
       </div>
     </ion-buttons>
   </ion-toolbar>
