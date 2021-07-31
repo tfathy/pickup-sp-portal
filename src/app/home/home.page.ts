@@ -5,7 +5,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Capacitor } from '@capacitor/core';
-import { ModalController, Platform } from '@ionic/angular';
+import { AlertController, ModalController, Platform } from '@ionic/angular';
 import { LoginComponent } from './login/login.component';
 
 @Component({
@@ -15,7 +15,7 @@ import { LoginComponent } from './login/login.component';
 })
 export class HomePage implements OnInit {
   slideOpts;
-  constructor(private platfrom: Platform, private modal: ModalController,
+  constructor(private platfrom: Platform, private modal: ModalController,private alert: AlertController,
     private router: Router) {}
   ngOnInit(): void {
     this.platfrom.ready().then(() => {
@@ -29,7 +29,6 @@ export class HomePage implements OnInit {
   }
 
   openLoginModal() {
-    console.log("****");
     this.modal
       .create({
         component: LoginComponent,
@@ -40,6 +39,8 @@ export class HomePage implements OnInit {
         modalElement.onDidDismiss().then(dismissData=>{
           if(dismissData.data.login){
             this.router.navigate(['/','landing']);
+          }else{
+            this.showAlert('Invalid username or password. Login denied','Error');
           }
         });
       });
@@ -315,5 +316,18 @@ export class HomePage implements OnInit {
         },
       },
     };
+  }
+
+  private showAlert(messageText: string, headerText: string) {
+    this.alert
+      .create({
+        header: headerText,
+        message: messageText,
+        cssClass: 'notification-alert',
+        buttons: ['OK'],
+      })
+      .then((alertElmnt) => {
+        alertElmnt.present();
+      });
   }
 }
