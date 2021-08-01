@@ -94,7 +94,7 @@ export class AuthService implements OnDestroy{
   }
 
   autoLogin() {
-    return from(Storage.get({ key: 'authData' })).pipe(
+    return from(Storage.get({ key: 'spAuthData' })).pipe(
       map((storedDate) => {
         if (!storedDate || !storedDate.value) {
           console.log('******** cannot find storage authData***** ');
@@ -188,7 +188,7 @@ export class AuthService implements OnDestroy{
       userType
     });
 
-      Storage.set({ key: 'authData', value: data });
+      Storage.set({ key: 'spAuthData', value: data });
 
   }
   private autoLogout(duration: number) {

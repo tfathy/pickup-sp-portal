@@ -19,7 +19,31 @@ const routes: Routes = [
   {
     path: 'subscribe-request',
     loadChildren: () => import('./subscribe-request/subscribe-request.module').then( m => m.SubscribeRequestPageModule)
+  },  {
+    path: 'setup-home',
+    loadChildren: () => import('./setup/setup-home/setup-home.module').then( m => m.SetupHomePageModule)
   },
+  {
+    path: 'vehicle',
+    loadChildren: () => import('./setup/vehicle/vehicle.module').then( m => m.VehiclePageModule)
+  },
+  {
+    path: 'my-services',
+    loadChildren: () => import('./setup/my-services/my-services.module').then( m => m.MyServicesPageModule)
+  },
+  {
+    path: 'members',
+    loadChildren: () => import('./setup/members/members.module').then( m => m.MembersPageModule)
+  },
+  {
+    path: 'team',
+    loadChildren: () => import('./setup/team/team.module').then( m => m.TeamPageModule)
+  },
+  {
+    path: 'users',
+    loadChildren: () => import('./setup/users/users.module').then( m => m.UsersPageModule)
+  },
+
 ];
 
 @NgModule({

@@ -1,5 +1,6 @@
 {
   "LOGIN": "log In",
+  "SETTINGS":"Settings",
   "CREATE_TEAM":"Create a team",
   "MAIN_MENU": "Main Menu",
   "START_MENU":"Start Menu",
@@ -14,5 +15,12 @@
   "COUNTRY":"Country",
   "ADDRESS":"Address",
   "SEND_REQUEST":"Send Request",
-  "NEW_REQUESTS":"New Requests"
+  "NEW_REQUESTS":"New Requests",
+  "VEHICLES":"Vehicles",
+  "SERVICES":"Services",
+  "EMPLOYEES":"Employees",
+  "TEAMS":"Work Teams",
+  "USERS":"Users",
+  "CHANGE_PASSWORD":"Change Password",
+  "MY-VECHILES":"Vehicles Deinitions"
 }

@@ -6,9 +6,10 @@ import { TranslateModule } from '@ngx-translate/core';
 import { HttpClientModule } from '@angular/common/http';
 import { IonicSelectableModule } from 'ionic-selectable';
 import { LoginComponent } from 'src/app/home/login/login.component';
+import { SearchToolbarComponent } from '../search-toolbar/search-toolbar.component';
 
 @NgModule({
-  declarations: [LoginComponent],
+  declarations: [LoginComponent, SearchToolbarComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -25,7 +26,8 @@ import { LoginComponent } from 'src/app/home/login/login.component';
     IonicModule,
     ReactiveFormsModule,
     TranslateModule,
-    IonicSelectableModule
+    IonicSelectableModule,
+    SearchToolbarComponent
   ]
 })
 export class SharedModule {}

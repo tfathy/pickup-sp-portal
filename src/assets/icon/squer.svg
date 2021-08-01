@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 100 100">
+  <defs>
+    <clipPath id="clip-squer">
+      <rect width="100" height="100"/>
+    </clipPath>
+  </defs>
+  <g id="squer" clip-path="url(#clip-squer)">
+    <g id="layer1" transform="translate(5.828 -1014.534)">
+      <path id="rect4477" d="M4.584,3A1.584,1.584,0,0,0,3,4.583V83.76a1.584,1.584,0,0,0,1.583,1.584H83.76a1.584,1.584,0,0,0,1.584-1.583V4.584A1.584,1.584,0,0,0,83.76,3H4.584ZM6.167,6.167h53.84v19H6.167Zm57.007,0h19v53.84h-19V6.167ZM6.167,28.336h19v53.84h-19Zm22.169,0H60.007V60.007H28.336Zm0,34.838h53.84v19H28.336Z" transform="translate(0 1020.362)" fill="#c70039"/>
+    </g>
+  </g>
+</svg>
