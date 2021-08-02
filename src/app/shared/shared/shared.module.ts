@@ -6,10 +6,10 @@ import { TranslateModule } from '@ngx-translate/core';
 import { HttpClientModule } from '@angular/common/http';
 import { IonicSelectableModule } from 'ionic-selectable';
 import { LoginComponent } from 'src/app/home/login/login.component';
-import { SearchToolbarComponent } from '../search-toolbar/search-toolbar.component';
+import { VehicleComponent } from 'src/app/setup/vehicle/vehicle/vehicle.component';
 
 @NgModule({
-  declarations: [LoginComponent, SearchToolbarComponent],
+  declarations: [LoginComponent, VehicleComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -27,7 +27,7 @@ import { SearchToolbarComponent } from '../search-toolbar/search-toolbar.compone
     ReactiveFormsModule,
     TranslateModule,
     IonicSelectableModule,
-    SearchToolbarComponent
+    VehicleComponent
   ]
 })
 export class SharedModule {}

@@ -23,4 +23,14 @@
   "USERS":"Users",
   "CHANGE_PASSWORD":"Change Password",
   "MY-VECHILES":"Vehicles Deinitions"
+  ,"SEARCH":"Search"
+  ,"ENTER_MODEL_YEAR":"Enter Model Year",
+  "CODE":"Code",
+  "MODEL":"Model",
+  "LICN_EXP_DATE":"Licen. Expiry",
+  "VCL_SIZE":"Size",
+  "SAVE":"Save",
+  "CLOSE":"Close",
+  "DISABLE":"Disable",
+  "ACTIVATE":"Activate"
 }

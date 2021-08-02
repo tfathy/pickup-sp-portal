@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="save()">{{"SAVE"|translate}}</ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()">{{"CLOSE"|translate}}</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid >
+    <ion-row>
+      <ion-col sizeSm="6">
+        <ion-item>
+          <ion-label position="floating">{{"CODE"|translate}}</ion-label>
+          <ion-input [(ngModel)]="model.code" name="code"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+
+      <ion-col   sizeSm="12">
+        <ion-item>
+          <ion-label position="floating">{{"DESC_AR"|translate}}</ion-label>
+          <ion-input [(ngModel)]="model.descAr" name="descAr"></ion-input>
+        </ion-item>
+      </ion-col>
+
+      <ion-col   sizeSm="12">
+        <ion-item>
+          <ion-label position="floating">{{"DESC_EN"|translate}}</ion-label>
+          <ion-input [(ngModel)]="model.descEn" name="descEn"></ion-input>
+        </ion-item>
+      </ion-col>
+
+    </ion-row>
+
+    <ion-row>
+      <ion-col >
+        <ion-item>
+        <ion-label position="floating">{{"VCL_SIZE"|translate}}</ion-label>
+        <ion-select name="gnVehicleSize" [(ngModel)]="model.gnVehicleSize" [selectedText]="model.gnVehicleSize?model.gnVehicleSize.descAr:''">
+          <ion-select-option *ngFor="let vclSize of vclSizeList" [value]="vclSize">
+            {{vclSize.descAr}}
+          </ion-select-option>
+        </ion-select>
+      </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="6">
+        <ion-item>
+          <ion-label position="floating">{{"MODEL"|translate}}</ion-label>
+          <ion-input [(ngModel)]="model.modelCompany" name="modelCompany"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="6">
+        <ion-item>
+          <ion-label position="floating">{{"MODEL_YEAR"|translate}}</ion-label>
+          <ion-input [(ngModel)]="model.modelYear" name="modelYear"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col >
+        <ion-item>
+          <ion-label position="floating">{{"LICN_EXP_DATE"|translate}}</ion-label>
+          <ion-datetime displayFormat="DD/MM/YYYY" name="licenExpDate" [(ngModel)]="model.licenExpDate"></ion-datetime>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-button *ngIf="model.activeFlag==='Y' && recordStatus==='update'" (click)="disableRecord()" color="light"
+      expand="block" fill="outline">{{"DISABLE"|translate}}</ion-button>
+    <ion-button *ngIf="model.activeFlag==='N' && recordStatus==='update'" (click)="enableRecord()" color="light"
+      expand="block" fill="outline">{{"ACTIVATE"|translate}}</ion-button>
+  </ion-toolbar>
+</ion-footer>

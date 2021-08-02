@@ -9,9 +9,10 @@ import { VehicleModel } from './vehicle-model';
   providedIn: 'root'
 })
 export class VehicleService {
-  url ='trx/sp-vcl';
+  url ='sp-app/trx/sp-vcl';
+  vclUrl = 'sp-app/trx/vcl';
   constructor(private http: HttpClient) { }
-
+//fetch all vcl for an sp
   findAllSpVehicle(token: string, spId): Observable<VehicleModel[]>{
     const headerInfo = new HttpHeaders({
       Authorization: token
@@ -22,31 +23,32 @@ export class VehicleService {
     );
   }
 
-  findByIdSpVehicle(token: string, spId,id): Observable<VehicleModel[]>{
+  // return one object by vcl.id
+  findByIdSpVehicle(token: string, id): Observable<VehicleModel>{
     const headerInfo = new HttpHeaders({
       Authorization: token
     });
-    return this.http.get<VehicleModel[]>(
-      `${environment.backendUrl}/${this.url}/${spId}/${id}`,
+    return this.http.get<VehicleModel>(
+      `${environment.backendUrl}/${this.vclUrl}/${id}`,
       { headers: headerInfo }
     );
   }
 
-  createSpVehicle(token: string, spId): Observable<VehicleModel[]>{
+  createSpVehicle(token: string,body: VehicleModel): Observable<VehicleModel>{
     const headerInfo = new HttpHeaders({
       Authorization: token
     });
-    return this.http.post<VehicleModel[]>(
-      `${environment.backendUrl}/${this.url}/${spId}`,
+    return this.http.post<VehicleModel>(
+      `${environment.backendUrl}/${this.vclUrl}`,body,
       { headers: headerInfo }
     );
   }
-  updateSpVehicle(token: string, spId,id): Observable<VehicleModel[]>{
+  updateSpVehicle(token: string,body: VehicleModel,id): Observable<VehicleModel>{
     const headerInfo = new HttpHeaders({
       Authorization: token
     });
-    return this.http.put<VehicleModel[]>(
-      `${environment.backendUrl}/${this.url}/${spId}/${id}`,
+    return this.http.put<VehicleModel>(
+      `${environment.backendUrl}/${this.vclUrl}/${id}`,body,
       { headers: headerInfo }
     );
   }

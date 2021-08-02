@@ -25,3 +25,9 @@ ion-item{
   background:transparent;
   padding: 2px;
 }
+
+.title-responsive{
+  @media(max-width: 300px){
+    display: none;
+  }
+}
