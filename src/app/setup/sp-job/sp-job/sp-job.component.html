@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="save()">{{"SAVE"|translate}}</ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()">{{"CLOSE"|translate}}</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid >
+    <ion-row>
+
+      <ion-col   sizeSm="12">
+        <ion-item>
+          <ion-label position="floating">{{"DESC_AR"|translate}}</ion-label>
+          <ion-input [(ngModel)]="model.descAr" name="descAr"></ion-input>
+        </ion-item>
+      </ion-col>
+
+      <ion-col   sizeSm="12">
+        <ion-item>
+          <ion-label position="floating">{{"DESC_EN"|translate}}</ion-label>
+          <ion-input [(ngModel)]="model.descEn" name="descEn"></ion-input>
+        </ion-item>
+      </ion-col>
+
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+        <ion-item>
+          <ion-label position="floating">{{"JOB_DESCRIPTION"|translate}}</ion-label>
+          <ion-textarea [(ngModel)]="model.jobDescription" name="jobDescription"></ion-textarea>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-button *ngIf="model.activeFlag==='Y' && recordStatus==='update'" (click)="disableRecord()" color="light"
+      expand="block" fill="outline">{{"DISABLE"|translate}}</ion-button>
+    <ion-button *ngIf="model.activeFlag==='N' && recordStatus==='update'" (click)="enableRecord()" color="light"
+      expand="block" fill="outline">{{"ACTIVATE"|translate}}</ion-button>
+  </ion-toolbar>
+</ion-footer>

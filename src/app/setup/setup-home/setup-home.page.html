@@ -21,7 +21,16 @@
           <ion-img slot="start" class="small" src="assets/icon/trunc.svg"></ion-img>
           <div>
             <ion-label>{{"VEHICLES"|translate}}</ion-label>
-            <ion-note slot="start"> Click to add bew Car</ion-note>
+            <ion-note slot="start"> Click to add new Car</ion-note>
+          </div>
+        </ion-item>
+      </ion-col>
+      <ion-col sizeLg="4" sizeMd="6" sizeSm="12">
+        <ion-item class="menu-item" button [routerLink]="['/sp-job']" lines="none">
+          <ion-img slot="start" class="small" src="assets/icon/jobs.svg"></ion-img>
+          <div>
+            <ion-label>{{"JOBS"|translate}}</ion-label>
+            <ion-note slot="start">{{"SP_JOB_DESC"|translate}}</ion-note>
           </div>
         </ion-item>
       </ion-col>

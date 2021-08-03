@@ -32,5 +32,9 @@
   "SAVE":"Save",
   "CLOSE":"Close",
   "DISABLE":"Disable",
-  "ACTIVATE":"Activate"
+  "ACTIVATE":"Activate",
+  "SP_JOB_DESC":"Click to define jobs",
+  "DESC_AR":"Arabic Name",
+  "DESC_EN":"English Name",
+  "JOB_DESCRIPTION":" Job Description"
 }

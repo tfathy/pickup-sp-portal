@@ -7,9 +7,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { IonicSelectableModule } from 'ionic-selectable';
 import { LoginComponent } from 'src/app/home/login/login.component';
 import { VehicleComponent } from 'src/app/setup/vehicle/vehicle/vehicle.component';
+import { SpJobComponent } from 'src/app/setup/sp-job/sp-job/sp-job.component';
 
 @NgModule({
-  declarations: [LoginComponent, VehicleComponent],
+  declarations: [LoginComponent, VehicleComponent,SpJobComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -27,7 +28,8 @@ import { VehicleComponent } from 'src/app/setup/vehicle/vehicle/vehicle.componen
     ReactiveFormsModule,
     TranslateModule,
     IonicSelectableModule,
-    VehicleComponent
+    VehicleComponent,
+    SpJobComponent
   ]
 })
 export class SharedModule {}

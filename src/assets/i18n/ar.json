@@ -32,6 +32,10 @@
   "SAVE":"حفظ",
   "CLOSE":"إغلاق",
   "DISABLE":"تعطيل",
-  "ACTIVATE":"تشغيل"
+  "ACTIVATE":"تشغيل",
+  "SP_JOB_DESC":"لتسجيل الوظائف",
+  "DESC_AR":"الاسم عربي",
+  "DESC_EN":"الاسم الانجليزي",
+  "JOB_DESCRIPTION":" وصف الوظيفة"
 
 }

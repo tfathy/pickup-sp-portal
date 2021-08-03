@@ -43,6 +43,10 @@ const routes: Routes = [
     path: 'users',
     loadChildren: () => import('./setup/users/users.module').then( m => m.UsersPageModule)
   },
+  {
+    path: 'sp-job',
+    loadChildren: () => import('./setup/sp-job/sp-job.module').then( m => m.SpJobPageModule)
+  },
 
 ];
 
