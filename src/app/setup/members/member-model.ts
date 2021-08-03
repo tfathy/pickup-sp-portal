@@ -1,7 +1,7 @@
 import { ServiceProviderModel } from 'src/app/model/service-provider-model';
 import { SpJobModel } from '../sp-job/sp-job-model';
 
-export class MemberModel{
+export class SpMemberModel{
   constructor(
     public sp: ServiceProviderModel,
     public fullNameAr: string,

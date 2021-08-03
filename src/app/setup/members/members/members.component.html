@@ -1,3 +1,90 @@
-<p>
-  members works!
-</p>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="save()">{{"SAVE"|translate}}</ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()">{{"CLOSE"|translate}}</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col sizeSm="6">
+        <ion-item>
+          <ion-label position="floating">{{"FULL_NAME_AR"|translate}}</ion-label>
+          <ion-input [(ngModel)]="model.fullNameAr" name="fullNameAr"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+
+      <ion-col sizeSm="12">
+        <ion-item>
+          <ion-label position="floating">{{"FULL_NAME_EN"|translate}}</ion-label>
+          <ion-input [(ngModel)]="model.fullNameEn" name="fullNameEn"></ion-input>
+        </ion-item>
+      </ion-col>
+
+      <ion-col sizeSm="12">
+        <ion-item>
+          <ion-label position="floating">{{"E_MAIL"|translate}}</ion-label>
+          <ion-input [(ngModel)]="model.email" name="email"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col sizeSm="12">
+        <ion-item>
+          <ion-label position="floating">{{"PHONE"|translate}}</ion-label>
+          <ion-input [(ngModel)]="model.phoneNum" name="phoneNum"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col sizeSm="12">
+        <ion-item>
+          <ion-label position="floating">{{"BIRTH_DATE"|translate}}</ion-label>
+          <ion-datetime [(ngModel)]="model.birthDate" name="birthDate"></ion-datetime>
+        </ion-item>
+      </ion-col>
+      <ion-col sizeSm="12">
+        <ion-item>
+          <ion-label position="floating">{{"DRIVING_LICN_EXP_DATE"|translate}}</ion-label>
+          <ion-datetime [(ngModel)]="model.drivingLicnExpDate" name="drivingLicnExpDate"></ion-datetime>
+        </ion-item>
+      </ion-col>
+        </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="floating">{{"JOB"|translate}}</ion-label>
+          <ion-select name="spJob" [(ngModel)]="model.spJob"
+            [selectedText]="model.spJob?model.spJob.descAr:''">
+            <ion-select-option *ngFor="let job of jobList" [value]="job">
+              {{job.descAr}}
+            </ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="floating">{{"HIRE_DATE"|translate}}</ion-label>
+          <ion-datetime displayFormat="DD/MM/YYYY" name="hireDate" [(ngModel)]="model.hireDate"></ion-datetime>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-button *ngIf="model.terminatedFlag==='N' && recordStatus==='update'" (click)="disableRecord()" color="light"
+      expand="block" fill="outline">{{"DISABLE"|translate}}</ion-button>
+    <ion-button *ngIf="model.terminatedFlag==='Y' && recordStatus==='update'" (click)="enableRecord()" color="light"
+      expand="block" fill="outline">{{"ACTIVATE"|translate}}</ion-button>
+  </ion-toolbar>
+</ion-footer>

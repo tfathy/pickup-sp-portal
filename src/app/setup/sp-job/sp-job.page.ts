@@ -9,7 +9,7 @@ import { of } from 'rxjs';
 import { ServiceProviderModel } from 'src/app/model/service-provider-model';
 import { readStorage, spAuthToken } from 'src/app/shared/shared-util';
 import { UserInfoService } from 'src/app/shared/user-info.service';
-import { SpJobService } from '../sp-job.service';
+import { SpJobService } from './sp-job.service';
 import { SpJobModel } from './sp-job-model';
 import { SpJobComponent } from './sp-job/sp-job.component';
 

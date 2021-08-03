@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ModalController, LoadingController } from '@ionic/angular';
 import { readStorage, spAuthToken } from 'src/app/shared/shared-util';
-import { SpJobService } from '../../sp-job.service';
+import { SpJobService } from '../sp-job.service';
 import { SpJobModel } from '../sp-job-model';
 
 @Component({
