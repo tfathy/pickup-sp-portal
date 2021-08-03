@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="save()">{{"SAVE"|translate}}</ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()">{{"CLOSE"|translate}}</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col   sizeLg="4">
+        <ion-item>
+          <ion-label position="floating">{{"DESC_AR"|translate}}</ion-label>
+          <ion-input [(ngModel)]="model.descAr" name="descAr"></ion-input>
+        </ion-item>
+      </ion-col>
+
+      <ion-col   sizeLg="4">
+        <ion-item>
+          <ion-label position="floating">{{"DESC_EN"|translate}}</ion-label>
+          <ion-input [(ngModel)]="model.descEn" name="descEn"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col   sizeLg="4">
+        <ion-item>
+          <ion-label position="floating">{{"MANAGER"|translate}}</ion-label>
+          <ion-select name="manager" [(ngModel)]="model.manager"
+            [selectedText]="model.manager?model.manager.fullNameAr:''">
+            <ion-select-option *ngFor="let mgr of memberList" [value]="mgr">
+              {{mgr.fullNameAr}}
+            </ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col   sizeLg="4">
+        <ion-item>
+          <ion-label position="floating">{{"VEHICLE"|translate}}</ion-label>
+          <ion-select name="gnVehicle" [(ngModel)]="model.gnVehicle"
+            [selectedText]="model.gnVehicle?model.gnVehicle.descAr:''">
+            <ion-select-option *ngFor="let vcl of vclList" [value]="vcl">
+              {{vcl.descAr}}
+            </ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+
+      <ion-col   sizeLg="4">
+        <ion-item>
+          <ion-label position="floating">{{"START_DATE"|translate}}</ion-label>
+          <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="model.startDate" name="startDate"></ion-datetime>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col  sizeLg="4">
+        <ion-item>
+          <ion-label position="floating">{{"END_DATE"|translate}}</ion-label>
+          <ion-datetime displayFormat="DD/MM/YYYY" name="endDate" [(ngModel)]="model.endDate"></ion-datetime>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="block" fill="solid">
+          {{"ADD_MORE_MEMBERS"|translate}}
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="light">
+    <ion-button *ngIf="model.activeFlag==='Y' && recordStatus==='update'" (click)="disableRecord()" color="primary"
+      expand="block" fill="outline">{{"DISABLE"|translate}}</ion-button>
+    <ion-button *ngIf="model.activeFlag==='N' && recordStatus==='update'" (click)="enableRecord()" color="primary"
+      expand="block" fill="outline">{{"ACTIVATE"|translate}}</ion-button>
+  </ion-toolbar>
+</ion-footer>

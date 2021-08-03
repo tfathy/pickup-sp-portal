@@ -9,9 +9,10 @@ import { LoginComponent } from 'src/app/home/login/login.component';
 import { VehicleComponent } from 'src/app/setup/vehicle/vehicle/vehicle.component';
 import { SpJobComponent } from 'src/app/setup/sp-job/sp-job/sp-job.component';
 import { MembersComponent } from 'src/app/setup/members/members/members.component';
+import { TeamComponent } from 'src/app/setup/team/team/team.component';
 
 @NgModule({
-  declarations: [LoginComponent, VehicleComponent,SpJobComponent,MembersComponent],
+  declarations: [LoginComponent, VehicleComponent,SpJobComponent,MembersComponent,TeamComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -31,7 +32,8 @@ import { MembersComponent } from 'src/app/setup/members/members/members.componen
     IonicSelectableModule,
     VehicleComponent,
     SpJobComponent,
-    MembersComponent
+    MembersComponent,
+    TeamComponent
   ]
 })
 export class SharedModule {}

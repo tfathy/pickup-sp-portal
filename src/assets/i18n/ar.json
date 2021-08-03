@@ -2,7 +2,7 @@
   "LOGIN": "تسجيل دخول",
   "SETTINGS": "إعدادات",
   "CREATE_TEAM": "فريق العمل",
-  "MAIN_MENU": "الرئسيسة",
+  "MAIN_MENU": "الرئيسية",
   "START_MENU": "القائمة",
   "SUBSCRIBE": "إشترك الان",
   "SUBSCRIPTION_REQUEST": "نموزج طلب إشتراك",
@@ -36,6 +36,32 @@
   "SP_JOB_DESC":"لتسجيل الوظائف",
   "DESC_AR":"الاسم عربي",
   "DESC_EN":"الاسم الانجليزي",
-  "JOB_DESCRIPTION":" وصف الوظيفة"
+  "JOB_DESCRIPTION":" وصف الوظيفة",
+  "FULL_NAME_AR":"الاسم كاملا-عربي",
+  "FULL_NAME_EN":"الاسم كاملا-انجليزي",
+  "BIRTH_DATE":"تاريخ الميلاد",
+  "DRIVING_LICN_EXP_DATE":"تاريخ انتهاء رخصة القيادة",
+  "JOB":"الوظيفة",
+  "HIRE_DATE":"تاريخ التعيين",
+  "VEHICLE":"السيارة",
+  "ADD_MORE_MEMBERS":"إضافة أعضاء اخرين",
+  "START_DATE":"فعال من يوم",
+  "END_DATE":"إلى يوم",
+  "MANAGER":"مسؤل الفريق",
+  "REQUEST_FOLLOWUP":"متابعة الطلبات",
+  "DIRECT_REQUESTS":"الطلبات المباشرة",
+  "TEAM_LOCATIONS":"مواقع الفرق",
+  "COMPLAINS":"شكاوى",
+  "INQUIRY":"إستفسارات",
+  "ACCEPT_NEW_REQUESTS":"اضغط لقبول طلبات جديدة",
+  "FOLLOW_UP_REQUESTS":"لمتابعة الطلبات المستلمه",
+  "VIEW_DIRECT_REQUESTS":"للاطلاع على الطلبات المباشرة",
+  "TEAM_LOCATION_ON_MAP":"لعرض اماكن تواجد الفرق على الخريطة",
+  "CUSTOMERS_COMPLAINS":"شكاوى العملاء",
+  "CUSTOMERS_INQUIRY":"استفسارات العملاء",
+  "JOBS":"تعريف الوظائف"
 
 }
+
+
+
