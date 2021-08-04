@@ -64,5 +64,11 @@
   "APPLY":"Apply",
   "OLD_PASSWORD":"Old Password",
   "NEW_PASSWORD":"New Password",
-  "REPEAT_PASSWORD":"Repeat Password"
+  "REPEAT_PASSWORD":"Repeat Password",
+  "VCL_NOTE":"Define the cars you own",
+  "SERVICE_NOTE":"Determine what services you may offer",
+  "EMPLOYEE_NOTE":"Define your employees and workers",
+  "TEAM_NOTE":"Group the workers in teams.Each team must have a manager",
+  "USER_NOTE":"To create the users who can use the mobile app to recive requests.Usualy the team managers",
+"CHANGE_PW_NOTE":"Click To change your password"
 }
