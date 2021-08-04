@@ -90,7 +90,7 @@ export class AuthService implements OnDestroy{
       clearTimeout(this.activeLogoutTimer);
     }
   this._user.next(null);
-   Storage.remove({ key: 'authData' });
+   Storage.remove({ key: 'spAuthData' });
   }
 
   autoLogin() {

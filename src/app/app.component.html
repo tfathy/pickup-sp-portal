@@ -8,19 +8,62 @@
     <ion-content>
       <ion-list>
         <ion-menu-toggle autoHide="false">
-          <ion-item (click)="change2Arabic()" button
-            detail="false"
-          >
-            <ion-icon slot="start" name="help"></ion-icon>
-            <ion-label> عربي </ion-label>
+          <ion-item [routerLink]="'/setup-home'" button detail="false">
+            <ion-icon slot="start" name="settings"></ion-icon>
+            <ion-label> {{"SETTINGS"|translate}} </ion-label>
           </ion-item>
         </ion-menu-toggle>
         <ion-menu-toggle autoHide="false">
-          <ion-item (click)="change2English()" button
-            detail="false"
-          >
-            <ion-icon slot="start" name="help"></ion-icon>
-            <ion-label> English </ion-label>
+          <ion-toggle [(ngModel)]="toggled" color="primary" (ionChange)="onLangChange()">
+          </ion-toggle>
+          <ion-label> {{toggled?'عربي':'English'}}</ion-label>
+        </ion-menu-toggle>
+        <ion-menu-toggle autoHide="false">
+          <ion-item [routerLink]="'/vehicle'" button detail="false">
+            <ion-icon slot="start" name="settings"></ion-icon>
+            <ion-label> {{"VEHICLES"|translate}} </ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle autoHide="false">
+          <ion-item [routerLink]="'/sp-job'" button detail="false">
+            <ion-icon slot="start" name="settings"></ion-icon>
+            <ion-label> {{"JOBS"|translate}} </ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle autoHide="false">
+          <ion-item [routerLink]="'/my-services'" button detail="false">
+            <ion-icon slot="start" name="settings"></ion-icon>
+            <ion-label> {{"SERVICES"|translate}} </ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle autoHide="false">
+          <ion-item [routerLink]="'/members'" button detail="false">
+            <ion-icon slot="start" name="settings"></ion-icon>
+            <ion-label> {{"EMPLOYEES"|translate}} </ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle autoHide="false">
+          <ion-item [routerLink]="'/steam'" button detail="false">
+            <ion-icon slot="start" name="settings"></ion-icon>
+            <ion-label> {{"TEAMS"|translate}} </ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle autoHide="false">
+          <ion-item [routerLink]="'/users'" button detail="false">
+            <ion-icon slot="start" name="settings"></ion-icon>
+            <ion-label> {{"USERS"|translate}} </ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle autoHide="false">
+          <ion-item [routerLink]="'/change-password'" button detail="false">
+            <ion-icon slot="start" name="settings"></ion-icon>
+            <ion-label> {{"CHANGE_PASSWORD"|translate}} </ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle autoHide="false">
+          <ion-item (click)="logout()" button detail="false">
+            <ion-icon slot="start" name="settings"></ion-icon>
+            <ion-label> {{"LOGOUT"|translate}} </ion-label>
           </ion-item>
         </ion-menu-toggle>
       </ion-list>

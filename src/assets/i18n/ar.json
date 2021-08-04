@@ -59,8 +59,12 @@
   "TEAM_LOCATION_ON_MAP":"لعرض اماكن تواجد الفرق على الخريطة",
   "CUSTOMERS_COMPLAINS":"شكاوى العملاء",
   "CUSTOMERS_INQUIRY":"استفسارات العملاء",
-  "JOBS":"تعريف الوظائف"
-
+  "JOBS":"تعريف الوظائف",
+  "LOGOUT":"خروج",
+  "APPLY":"تطبيق",
+  "OLD_PASSWORD":"كلمة السر القديمة",
+  "NEW_PASSWORD":"كلمة السر الجديدة",
+  "REPEAT_PASSWORD":"تكرار كلمة السر"
 }
 
 

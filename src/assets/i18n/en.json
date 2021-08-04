@@ -59,6 +59,10 @@
   "TEAM_LOCATION_ON_MAP":"Open Map to view teams location",
   "CUSTOMERS_COMPLAINS":"Customers Complains",
   "CUSTOMERS_INQUIRY":"Customers Inquiries",
-  "JOBS":"Jobs Definition"
-
+  "JOBS":"Jobs Definition",
+  "LOGOUT":"Log Out",
+  "APPLY":"Apply",
+  "OLD_PASSWORD":"Old Password",
+  "NEW_PASSWORD":"New Password",
+  "REPEAT_PASSWORD":"Repeat Password"
 }
