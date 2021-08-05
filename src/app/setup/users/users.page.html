@@ -1,9 +1,46 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>users</ion-title>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start" *ngIf="!showSearchbar">
+      <ion-button (click)="returnBack()">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title *ngIf="!showSearchbar"> {{"SEARCH"|translate}} </ion-title>
+    <ion-searchbar *ngIf="showSearchbar" showCancelButton="always" [(ngModel)]="queryText"
+      (ionChange)="onSearchEvent($event)" (ionCancel)="onSearchCancelEvent()"
+      [placeholder]="'ENTERT_DESCRIPTION'|translate"></ion-searchbar>
+    <ion-buttons slot="end">
+      <ion-button *ngIf="!ios && !showSearchbar" (click)="showSearchbar = true">
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="chevron-down-circle-outline" pullingText="Pull to refresh"
+      refreshingSpinner="circles" refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+  <ion-virtual-scroll class="ion-margin" [items]="userList" approxItemHeight="320px">
+    <ion-card *virtualItem="let usr;let itemBounds = bounds; " button (click)="openOptions(usr)">
+      <ion-card-header>
+        <ion-title>{{usr.member.fullNameAr}}</ion-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item lines="none">
+          <div class="side-div">
+            <ion-label color="primary">{{"USER_NAME"|translate}} {{usr.email}}</ion-label>
+            <ion-label color="primary">{{"STATUS"|translate}} {{usr.accountStatus}} </ion-label>
+          </div>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </ion-virtual-scroll>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="primary" (click)="createRecord()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>

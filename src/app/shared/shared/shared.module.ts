@@ -10,9 +10,10 @@ import { VehicleComponent } from 'src/app/setup/vehicle/vehicle/vehicle.componen
 import { SpJobComponent } from 'src/app/setup/sp-job/sp-job/sp-job.component';
 import { MembersComponent } from 'src/app/setup/members/members/members.component';
 import { TeamComponent } from 'src/app/setup/team/team/team.component';
+import { UsersComponent } from 'src/app/setup/users/users/users.component';
 
 @NgModule({
-  declarations: [LoginComponent, VehicleComponent,SpJobComponent,MembersComponent,TeamComponent],
+  declarations: [LoginComponent, VehicleComponent,SpJobComponent,MembersComponent,TeamComponent,UsersComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -33,7 +34,8 @@ import { TeamComponent } from 'src/app/setup/team/team/team.component';
     VehicleComponent,
     SpJobComponent,
     MembersComponent,
-    TeamComponent
+    TeamComponent,
+    UsersComponent
   ]
 })
 export class SharedModule {}

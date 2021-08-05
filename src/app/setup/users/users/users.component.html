@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="save()">{{"SAVE"|translate}}</ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()">{{"CLOSE"|translate}}</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid >
+    <ion-row>
+      <ion-col >
+        <ion-item>
+        <ion-label position="floating">{{"EMPLOYEE"|translate}}</ion-label>
+        <ion-select name="member" [(ngModel)]="model.member" [selectedText]="model.member?model.member.fullNameAr:''"
+        (ionChange)="onEmpSelect()" >
+          <ion-select-option *ngFor="let mem of memberList" [value]="mem" >
+            {{mem.fullNameAr}}
+          </ion-select-option>
+        </ion-select>
+      </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col sizeSm="12">
+        <ion-item>
+          <ion-label position="floating">{{"USER_NAME"|translate}}</ion-label>
+          <ion-input [(ngModel)]="model.email" name="code"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col   sizeSm="12">
+        <ion-item>
+          <ion-label position="floating">{{"PASSWORD"|translate}}</ion-label>
+          <ion-input [(ngModel)]="model.password" name="descAr"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+
+
+
+
+  </ion-grid>
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-button *ngIf="model.accountStatus==='Y' && recordStatus==='update'" (click)="disableRecord()" color="light"
+      expand="block" fill="outline">{{"DISABLE"|translate}}</ion-button>
+    <ion-button *ngIf="model.accountStatus==='N' && recordStatus==='update'" (click)="enableRecord()" color="light"
+      expand="block" fill="outline">{{"ACTIVATE"|translate}}</ion-button>
+  </ion-toolbar>
+</ion-footer>
