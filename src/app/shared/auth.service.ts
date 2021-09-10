@@ -97,7 +97,7 @@ export class AuthService implements OnDestroy{
     return from(Storage.get({ key: 'spAuthData' })).pipe(
       map((storedDate) => {
         if (!storedDate || !storedDate.value) {
-          console.log('******** cannot find storage authData***** ');
+          console.log('******** cannot find storage spAuthData***** ');
           return null;
         }
         const parsData = JSON.parse(storedDate.value) as {
@@ -140,7 +140,6 @@ export class AuthService implements OnDestroy{
   }
 
   private setUserData(userData: HttpResponse<AuthResponseData>) {
-    console.log(userData);
     const currentime = new Date().getTime();
     const ms = currentime+ +userData.headers.get('expires') * 1000;
 
@@ -193,12 +192,12 @@ export class AuthService implements OnDestroy{
   }
   private autoLogout(duration: number) {
     console.log('*******autoLogout executed********');
-   if (this.activeLogoutTimer) {
+/*   if (this.activeLogoutTimer) {
       clearTimeout(this.activeLogoutTimer);
     }
     this.activeLogoutTimer = setTimeout(() => {
       this.logout();
-    }, duration);
+    }, duration);*/
   }
 
 

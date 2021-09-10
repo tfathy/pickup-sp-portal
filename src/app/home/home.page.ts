@@ -37,6 +37,7 @@ export class HomePage implements OnInit {
       .then((modalElement) => {
         modalElement.present();
         modalElement.onDidDismiss().then(dismissData=>{
+          console.log('dismissdata=>',dismissData.data.login);
           if(dismissData.data.login){
             this.router.navigate(['/','landing']);
           }else{
