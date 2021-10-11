@@ -13,27 +13,12 @@
   <ion-grid>
     <ion-row>
       <ion-col sizeMd="8" sizeSm="12">
-        <ion-slides pager="true" [options]="slideOpts">
-          <ion-slide>
-            <div>
-              <h1>{{"CREATE_TEAM"|translate}}</h1>
-              <ion-img src="assets/icon/team.jpg"></ion-img>
-            </div>
-
-          </ion-slide>
-          <ion-slide>
-            <div>
-              <h1>Receiving Requests</h1>
-              <ion-img src="assets/icon/locations.png"></ion-img>
-            </div>
-          </ion-slide>
-          <ion-slide>
-            <div>
-              <h1>Tracking Teams</h1>
-              <ion-img src="assets/icon/tracking.jpg"></ion-img>
-            </div>
+        <ion-slides [options]="highlightSlideOpts">
+          <ion-slide *ngFor="let h of middle">
+            <img [src]="h.img">
           </ion-slide>
         </ion-slides>
+
       </ion-col>
       <ion-col sizeMd="4" sizeSm="12">
         <hr>
@@ -53,7 +38,7 @@
       </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col sizeMd="4" offsetMd="2" sizeSm="12">
+      <ion-col sizeMd="8" sizeSm="12">
         <ion-button fill="solid" color="primary" expand="block" [routerLink]="'/subscribe-request'">
           {{"SUBSCRIBE"|translate}}
         </ion-button>

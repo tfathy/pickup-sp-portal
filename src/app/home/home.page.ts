@@ -15,8 +15,46 @@ import { LoginComponent } from './login/login.component';
 })
 export class HomePage implements OnInit {
   slideOpts;
-  constructor(private platfrom: Platform, private modal: ModalController,private alert: AlertController,
-    private router: Router) {}
+  middle = [
+    {
+      img: '/assets/icon/b1.png',
+    },
+    {
+      img: '/assets/icon/b2.png',
+    },
+    {
+      img: '/assets/icon/b3.png',
+    },
+    {
+      img: '/assets/icon/b4.png',
+    },
+  ];
+  catSlideOpts = {
+    slidesPerView: 3.5,
+    spaceBetween: 10,
+    slidesOffsetBefore: 11,
+    freeMode: true,
+  };
+
+  highlightSlideOpts = {
+    slidesPerView: 1.05,
+    spaceBetween: 10,
+    centeredSlides: true,
+    loop: true,
+  };
+
+  featuredSlideOpts = {
+    slidesPerView: 1.2,
+    spaceBetween: 10,
+    freeMode: true,
+  };
+
+  constructor(
+    private platfrom: Platform,
+    private modal: ModalController,
+    private alert: AlertController,
+    private router: Router
+  ) {}
   ngOnInit(): void {
     this.platfrom.ready().then(() => {
       console.log(this.platfrom.width());
@@ -36,12 +74,15 @@ export class HomePage implements OnInit {
       })
       .then((modalElement) => {
         modalElement.present();
-        modalElement.onDidDismiss().then(dismissData=>{
-          console.log('dismissdata=>',dismissData.data.login);
-          if(dismissData.data.login){
-            this.router.navigate(['/','landing']);
-          }else{
-            this.showAlert('Invalid username or password. Login denied','Error');
+        modalElement.onDidDismiss().then((dismissData) => {
+          console.log('dismissdata=>', dismissData.data.login);
+          if (dismissData.data.login) {
+            this.router.navigate(['/', 'landing']);
+          } else {
+            this.showAlert(
+              'Invalid username or password. Login denied',
+              'Error'
+            );
           }
         });
       });
