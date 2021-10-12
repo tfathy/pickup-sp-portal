@@ -74,5 +74,12 @@
   "EMPLOYEE":"Employee",
   "USER_NAME":"User Name",
   "PASSWORD":"Password",
-  "STATUS":"Status"
+  "STATUS":"Status",
+  "OPERATIONL_CARD":"Operational Permission",
+  "SELECT_IMAGE":"Upload Image",
+  "ID_CARD_BACK":"National ID card-front image",
+  "ID_CARD_FRONT":"National ID card -back image",
+  "DRIVING_LICN_IMAGE":"Driving Licence Image",
+  "DRIVER_IMAGE":"Driver Image",
+  "CAR_IMAGE":"Car Image"
 }

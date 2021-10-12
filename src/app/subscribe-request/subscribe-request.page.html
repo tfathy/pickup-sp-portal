@@ -14,7 +14,7 @@
 
     <ion-grid>
       <ion-row>
-        <ion-col  sizeLg="6" sizeMd="6" size="12">
+        <ion-col sizeLg="6" sizeMd="6" size="12">
           <ion-item>
             <ion-label position="floating">{{"COMPANY_NAME_AR"|translate}}</ion-label>
             <ion-input formControlName="companyNameAr"></ion-input>
@@ -41,13 +41,11 @@
           </ion-item>
           <ion-item>
             <ion-label position="floating">{{"COUNTRY"|translate}} </ion-label>
-           <ion-select formControlName="gnCountry">
-            <ion-select-option
-            *ngFor="let country of countryList" [value]="country"
-            >
-            {{country.nameAr}}
-          </ion-select-option>
-           </ion-select>
+            <ion-select formControlName="gnCountry">
+              <ion-select-option *ngFor="let country of countryList" [value]="country">
+                {{country.nameAr}}
+              </ion-select-option>
+            </ion-select>
           </ion-item>
           <ion-item>
             <ion-label position="floating">{{"ADDRESS"|translate}} </ion-label>
@@ -65,37 +63,145 @@
     <ion-row>
       <ion-col size="12" sizeMd="4">
         <ion-card>
-         <ion-card-header>
-          <ion-button>
-            Selectt file
-          </ion-button>
-         </ion-card-header>
-          <ion-card-title> operation card</ion-card-title>
+          <ion-card-header>
+            <ion-item lines="none">
+              <ion-button *ngIf="!images[0]" fill="solid" expand="block" color="danger" (click)="selectImage()">
+                {{"SELECT_IMAGE"|translate}}
+                <ion-icon slot="start" name="camera"></ion-icon>
+              </ion-button>
+              <ion-button *ngIf="images[0]" slot="end" fill="clear" (click)="deleteImage(images[0])">
+                <ion-icon slot="icon-only" name="trash"></ion-icon>
+              </ion-button>
+            </ion-item>
+          </ion-card-header>
+          <ion-title>
+            {{"OPERATIONL_CARD"|translate}}
+          </ion-title>
+          <ion-card-content>
+            <div>
+              <ion-img [src]="images[0]?images[0].data:''"></ion-img>
+            </div>
+
+          </ion-card-content>
         </ion-card>
       </ion-col>
-      <ion-col size="12"  sizeMd="4">
+      <ion-col size="12" sizeMd="4">
         <ion-card>
-          driver image
+          <ion-card-header>
+            <ion-item lines="none">
+              <ion-button *ngIf="!images[1]" fill="solid" expand="block" color="danger" (click)="selectImage()">
+                {{"SELECT_IMAGE"|translate}}
+                <ion-icon slot="start" name="camera"></ion-icon>
+              </ion-button>
+              <ion-button *ngIf="images[1]" slot="end" fill="clear" (click)="deleteImage(images[1])">
+                <ion-icon slot="icon-only" name="trash"></ion-icon>
+              </ion-button>
+            </ion-item>
+          </ion-card-header>
+          <ion-title>
+            {{"ID_CARD_FRONT"|translate}}
+          </ion-title>
+          <ion-card-content>
+            <div>
+              <ion-img [src]="images[1]?images[1].data:''"></ion-img>
+            </div>
+          </ion-card-content>
         </ion-card>
       </ion-col>
-      <ion-col size="12"  sizeMd="4">
+      <ion-col size="12" sizeMd="4">
         <ion-card>
-          car image
+          <ion-card-header>
+            <ion-item lines="none">
+              <ion-button *ngIf="!images[2]" fill="solid" expand="block" color="danger" (click)="selectImage()">
+                {{"SELECT_IMAGE"|translate}}
+                <ion-icon slot="start" name="camera"></ion-icon>
+              </ion-button>
+              <ion-button *ngIf="images[2]" slot="end" fill="clear" (click)="deleteImage(images[2])">
+                <ion-icon slot="icon-only" name="trash"></ion-icon>
+              </ion-button>
+            </ion-item>
+          </ion-card-header>
+          <ion-title>
+            {{"ID_CARD_BACK"|translate}}
+          </ion-title>
+          <ion-card-content>
+            <div>
+              <ion-img [src]="images[2]?images[2].data:''"></ion-img>
+            </div>
+          </ion-card-content>
         </ion-card>
       </ion-col>
-      <ion-col size="12"  sizeMd="4">
+      <ion-col size="12" sizeMd="4">
         <ion-card>
-          ID front image
+          <ion-card-header>
+            <ion-item lines="none">
+              <ion-button *ngIf="!images[3]" fill="solid" expand="block" color="danger" (click)="selectImage()">
+                {{"SELECT_IMAGE"|translate}}
+                <ion-icon slot="start" name="camera"></ion-icon>
+              </ion-button>
+              <ion-button *ngIf="images[3]" slot="end" fill="clear" (click)="deleteImage(images[3])">
+                <ion-icon slot="icon-only" name="trash"></ion-icon>
+              </ion-button>
+            </ion-item>
+          </ion-card-header>
+          <ion-title>
+            {{"DRIVING_LICN_IMAGE"|translate}}
+          </ion-title>
+          <ion-card-content>
+            <div>
+              <ion-img [src]="images[3]?images[3].data:''"></ion-img>
+            </div>
+
+          </ion-card-content>
         </ion-card>
       </ion-col>
-      <ion-col size="12"  sizeMd="4">
+      <ion-col size="12" sizeMd="4">
         <ion-card>
-          ID back image
+          <ion-card-header>
+            <ion-item lines="none">
+              <ion-button *ngIf="!images[4]" fill="solid" expand="block" color="danger" (click)="selectImage()">
+                {{"SELECT_IMAGE"|translate}}
+                <ion-icon slot="start" name="camera"></ion-icon>
+              </ion-button>
+              <ion-button *ngIf="images[4]" slot="end" fill="clear" (click)="deleteImage(images[4])">
+                <ion-icon slot="icon-only" name="trash"></ion-icon>
+              </ion-button>
+            </ion-item>
+          </ion-card-header>
+          <ion-title>
+            {{"DRIVER_IMAGE"|translate}}
+          </ion-title>
+          <ion-card-content>
+            <div>
+              <ion-img [src]="images[4]?images[4].data:''"></ion-img>
+            </div>
+
+          </ion-card-content>
         </ion-card>
       </ion-col>
-      <ion-col size="12"  sizeMd="4">
+
+      <ion-col size="12" sizeMd="4">
         <ion-card>
-         driving licen image
+          <ion-card-header>
+            <ion-item lines="none">
+              <ion-button *ngIf="!images[5] " fill="solid" expand="block" color="danger" (click)="selectImage()">
+                {{"SELECT_IMAGE"|translate}}
+                <ion-icon slot="start" name="camera"></ion-icon>
+              </ion-button>
+              <ion-button *ngIf="images[5]" slot="end" fill="clear" (click)="deleteImage(images[5])">
+                <ion-icon slot="icon-only" name="trash"></ion-icon>
+              </ion-button>
+            </ion-item>
+          </ion-card-header>
+          <ion-title>
+            {{"CAR_IMAGE"|translate}}
+          </ion-title>
+          <ion-card-content>
+            <div>
+              <ion-img [src]="images[5]?images[5].data:''"></ion-img>
+            </div>
+
+          </ion-card-content>
         </ion-card>
       </ion-col>
     </ion-row>
@@ -104,8 +210,7 @@
 </ion-content>
 <ion-footer>
   <ion-toolbar>
-    <ion-button fill="solid" color="primary" expand="block"
-    (click)="postRequest()">{{"SEND_REQUEST"|translate}}
+    <ion-button fill="solid" color="primary" expand="block" (click)="postRequest()">{{"SEND_REQUEST"|translate}}
       <ion-icon name="send-outline" slot="end"></ion-icon>
     </ion-button>
   </ion-toolbar>

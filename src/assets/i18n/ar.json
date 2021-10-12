@@ -74,5 +74,12 @@
   "EMPLOYEE":"الموظف",
   "USER_NAME":"السم المستخدم",
   "PASSWORD":"كلمة السر",
-  "STATUS":"الحالة"
+  "STATUS":"الحالة",
+  "OPERATIONL_CARD":"كارت التشغيل",
+  "SELECT_IMAGE":"حمل الصورة",
+  "ID_CARD_BACK":"الهوية الوطنية-الصورة الامامية",
+  "ID_CARD_FRONT":"الهوية الوطنية-الصورة الخلفية",
+  "DRIVING_LICN_IMAGE":"رخصة السائق",
+  "DRIVER_IMAGE":"صورة السائق",
+  "CAR_IMAGE":"صورة السيارة"
 }
